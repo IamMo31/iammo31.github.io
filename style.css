@@ -1,21 +1,62 @@
+/*
+ * This file contains all the styles for the Jekyll portfolio website.
+ */
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* Base Styles */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0c0a0c;
+    background-color: #0d121c;
     color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
 }
+
+/* Gradient for Hero Section */
 .hero-gradient {
-    background: linear-gradient(135deg, #1f2937 0%, #0c0a0c 100%);
+    background: linear-gradient(to bottom right, #0d121c, #1a202c);
 }
+
+/* Text Gradient for Headings */
 .text-gradient {
-    background-image: linear-gradient(45deg, #7452d3, #00C6FF);
+    background-image: linear-gradient(45deg, #a5b4fc, #6366f1);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
+
+/* Bento Card Style */
 .bento-card {
-    background-color: #1a1a2e;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1a202c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .bento-card:hover {
     transform: translateY(-5px);
-    box-shadow: 1 10px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Article content styling (for writeups) */
+.prose {
+    color: #cbd5e1;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+    color: #ffffff;
+}
+
+.prose a {
+    color: #60a5fa;
+}
+
+.prose a:hover {
+    color: #3b82f6;
+}
+
+.prose pre {
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-x: auto;
 }
