@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="py-6 px-4 md:px-12 z-10 sticky top-0 bg-black bg-opacity-80 backdrop-blur-sm">
+        <nav class="flex justify-between items-center">
+            <a href="index.html" class="text-2xl md:text-3xl font-bold tracking-tight text-white hover:text-gray-300 transition-colors">
+                <span class="text-gradient">Cybersecurity Portfolio</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="index.html#about" class="hover:text-blue-400 transition-colors">About Me</a>
+                <a href="index.html#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 text-center space-y-4">
+            <a href="projects.html" class="block text-xl font-medium hover:text-blue-400 transition-colors">Projects</a>
+            <a href="index.html#about" class="block text-xl font-medium hover:text-blue-400 transition-colors">About Me</a>
+            <a href="index.html#contact" class="block text-xl font-medium hover:text-blue-400 transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content for All Projects -->
+    <main class="px-4 md:px-12 py-16">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-8">
+            All Projects
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <!-- Card 1 -->
+            <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Analysis of Phishing Attacks</h3>
+                <p class="text-gray-400 mb-4">
+                    A detailed investigation of the techniques used in modern phishing campaigns and how to recognize them.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+                    Read Report
+                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Security Audit for Web Applications</h3>
+                <p class="text-gray-400 mb-4">
+                    A practical guide to conducting penetration tests and securing web applications.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+                    Read Report
+                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Incident Response for Small and Medium Businesses</h3>
+                <p class="text-gray-400 mb-4">
+                    A strategic plan for responding to security incidents, especially for small and medium-sized enterprises.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+                    Read Report
+                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-2">The Future of Cryptography</h3>
+                <p class="text-gray-400 mb-4">
+                    An insight into quantum cryptography and the challenges it brings to digital security.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+                    Read Report
+                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Additional Projects below -->
+            <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Network Security Analysis</h3>
+                <p class="text-gray-400 mb-4">
+                    A detailed study on network vulnerabilities and best practices for securing infrastructure.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+                    Read Report
+                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Malware Reverse Engineering</h3>
+                <p class="text-gray-400 mb-4">
+                    An in-depth look at dissecting malware to understand its functionality and create effective countermeasures.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+                    Read Report
+                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Threat Hunting and Intelligence</h3>
+                <p class="text-gray-400 mb-4">
+                    Exploring proactive security measures to detect and mitigate threats before they cause damage.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+                    Read Report
+                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Cloud Security Best Practices</h3>
+                <p class="text-gray-400 mb-4">
+                    A comprehensive guide to securing data and applications in public and private cloud environments.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+                    Read Report
+                    <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-8 text-center text-gray-500 text-sm">
+        <p>Built with Tailwind CSS & ❤️</p>
+        <p class="mt-2">© 2024 Cybersecurity Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
