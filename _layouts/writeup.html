@@ -1,26 +1,26 @@
 ---
 layout: default
 ---
+<main class="container mx-auto px-4 md:px-12 py-16">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-4">{{ page.title }}</h1>
+        <p class="text-lg text-gray-400 mb-8">{{ page.description }}</p>
 
-<main class="container mx-auto px-4 md:px-12 py-16 max-w-4xl">
-    <!-- Article Header -->
-    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-4">
-        {{ page.title }}
-    </h1>
-    <div class="text-gray-400 mb-8 flex items-center space-x-4 text-sm">
-        <span>By {{ page.author }}</span>
-        <span class="text-gray-600">•</span>
-        <span>Published on {{ page.date | date: "%B %d, %Y" }}</span>
+        <!-- Post Metadata -->
+        <div class="flex items-center text-gray-500 text-sm mb-12">
+            <span>By {{ page.author }}</span>
+            <span class="mx-2">•</span>
+            <span>{{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+
+        <!-- Featured Image -->
+        {% if page.image %}
+        <img src="{{ page.image }}" alt="{{ page.image_alt }}" class="w-full h-auto rounded-xl mb-12 shadow-lg">
+        {% endif %}
+
+        <!-- Article Content -->
+        <article class="prose prose-invert max-w-none text-gray-300 leading-relaxed">
+            {{ content }}
+        </article>
     </div>
-
-    <!-- Article Image -->
-    <div class="mb-12">
-        <img src="{{ page.image }}" alt="{{ page.image_alt }}" class="w-full rounded-xl">
-    </div>
-
-    <!-- Article Content -->
-    <article class="prose prose-invert max-w-none text-gray-300">
-        {{ content }}
-    </article>
 </main>
-
