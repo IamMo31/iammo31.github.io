@@ -1,21 +1,20 @@
 ---
 layout: default
-title: All Projects
 ---
 <main class="py-16">
-    <div class="container mx-auto px-4 md:px-12">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white text-center mb-12">All Projects</h1>
+    <article class="container mx-auto px-4 md:px-12 max-w-4xl">
+        {% if page.image %}
+        <img src="{{ page.image }}" alt="{{ page.image_alt | default: 'Post image' }}" class="w-full h-auto rounded-xl shadow-lg mb-8">
+        {% endif %}
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {% for post in site.posts %}
-            <div class="bento-card p-6 rounded-2xl shadow-lg border border-gray-800 flex flex-col justify-between transition-transform duration-300 hover:scale-105">
-                <div>
-                    <h2 class="text-xl md:text-2xl font-bold text-white mb-2">{{ post.title }}</h2>
-                    <p class="text-gray-400 mb-4">{{ post.description }}</p>
-                </div>
-                <a href="{{ post.url }}" class="text-blue-400 hover:underline font-medium self-end">Read Report →</a>
-            </div>
-            {% endfor %}
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">{{ page.title }}</h1>
+        <div class="text-gray-400 text-lg mb-8">
+            <p><strong>Author:</strong> {{ page.author }}</p>
+            <p><strong>Published:</strong> {{ page.date | date: "%B %d, %Y" }}</p>
         </div>
-    </div>
+
+        <div class="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed">
+            {{ content }}
+        </div>
+    </article>
 </main>
