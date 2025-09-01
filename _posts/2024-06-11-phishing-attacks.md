@@ -1,10 +1,4 @@
----
-layout: writeup
-title: "Analysis of Phishing Attacks" author: "Your Name" date: 2024-06-11 12:00:00 +0200 
-image: "https://www.google.com/search?q=https://placehold.co/1000x500/1e293b/a5b4fc%3Ftext%3DPhishing%2BAnalysis"
-image_alt: "Illustration of a phishing attack" description: "A detailed investigation of the techniques used in modern phishing campaigns and how to recognize them."
----
-
+layout: writeup title: "Analysis of Phishing Attacks" author: "Your Name" date: 2024-06-11 12:00:00 +0200 image: "https://www.google.com/search?q=https://placehold.co/1000x500/1e293b/a5b4fc%3Ftext%3DPhishing%2BAnalysis" image_alt: "Illustration of a phishing attack" description: "A detailed investigation of the techniques used in modern phishing campaigns and how to recognize them."
 In the ever-evolving landscape of cyber threats, phishing remains one of the most prevalent and effective forms of attack. This write-up delves into the intricate techniques employed by malicious actors to deceive users and gain unauthorized access to sensitive information. We will explore various attack vectors, from traditional email-based scams to more sophisticated spear phishing and whaling attempts.
 
 The Anatomy of a Phishing Attack
