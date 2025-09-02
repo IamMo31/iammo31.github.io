@@ -1,9 +1,18 @@
 title: Cybersecurity Portfolio
-email: your-email@example.com
-description: >- Ein Portfolio für Cybersecurity-Analysen und Berichte.
-#baseurl: ""
-url: "https://iammo31.github.io"
-permalink: /:title/
-plugins:
+description: Meine Analysen und Berichte zu Cybersecurity-Themen.
+author: Dein Name
 
-jekyll-feed
+Die baseurl ist entscheidend für GitHub Pages, wenn deine Website
+in einem Unterverzeichnis (z. B. "https://www.google.com/search?q=https://username.github.io/dein-repo") liegt.
+Lege sie hier als "/dein-repo-name" fest. Wenn deine Website direkt
+unter "https://www.google.com/search?q=https://username.github.io" liegt, lass es leer.
+baseurl: ""
+markdown: kramdown
+theme: null
+
+Exclude ist wichtig, damit Jekyll bestimmte Ordner nicht verarbeitet
+exclude:
+
+Gemfile
+
+Gemfile.lock
