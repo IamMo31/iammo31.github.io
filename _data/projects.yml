@@ -36,3 +36,9 @@
   - cryptography
   - quantum
   - post-quantum
+- slug: splunk
+  title: Windows Active Directory
+  short: An Introduction to Windows AD
+  long: BLA bla bla
+  tags:
+  - IAM
