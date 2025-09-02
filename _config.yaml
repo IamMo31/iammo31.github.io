@@ -1,0 +1,38 @@
+title: Cyber-Portfolio
+description: Ein Online-Portfolio mit Write-ups zu Cybersecurity-Themen und Hack-the-Box-Lösungen.
+author: Ihr Name
+lang: de-DE
+timezone: Europe/Berlin
+baseurl: "" # Falls auf einem Subverzeichnis gehostet, hier anpassen (z.B. "/portfolio")
+url: "https://iammo31.github.io/" 
+
+Jekyll Build Einstellungen
+markdown: kramdown
+permalink: /:title/
+exclude:
+
+Gemfile
+
+Gemfile.lock
+
+node_modules
+
+vendor/bundle/
+
+vendor/cache/
+
+vendor/gems/
+
+vendor/ruby/
+
+Auflistung der Posts (Write-ups)
+Hier können Sie Tags oder Kategorien hinzufügen, um die Posts zu organisieren
+collections:
+writeups:
+output: true
+permalink: /writeups/:title/
+
+Jekyll Plugins
+plugins:
+
+jekyll-feed
