@@ -1,16 +1,10 @@
 title: Cybersecurity Portfolio
 description: Meine Analysen und Berichte zu Cybersecurity-Themen.
 author: Dein Name
-
-Die baseurl ist entscheidend für GitHub Pages, wenn deine Website
-in einem Unterverzeichnis (z. B. "https://www.google.com/search?q=https://username.github.io/dein-repo") liegt.
-Lege sie hier als "/dein-repo-name" fest. Wenn deine Website direkt
-unter "https://www.google.com/search?q=https://username.github.io" liegt, lass es leer.
 baseurl: ""
 markdown: kramdown
 theme: null
 
-Exclude ist wichtig, damit Jekyll bestimmte Ordner nicht verarbeitet
 exclude:
 
 Gemfile
