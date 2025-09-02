@@ -1,0 +1,10 @@
+title: Cybersecurity Portfolio
+email: your-email@example.com
+description: >-
+Ein Portfolio für Cybersecurity-Analysen und Berichte.
+baseurl: ""
+url: "https://dein-github-username.github.io"
+permalink: /:title/
+plugins:
+
+jekyll-feed
