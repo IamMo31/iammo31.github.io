@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Writeup</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Link zur externen CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="py-6 px-4 md:px-12 z-10 sticky top-0 bg-black bg-opacity-80 backdrop-blur-sm">
+        <nav class="flex justify-between items-center">
+            <a href="index.html" class="text-2xl md:text-3xl font-bold tracking-tight text-white hover:text-gray-300 transition-colors">
+                <span class="text-gradient">Cybersecurity Portfolio</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="index.html#projects" class="hover:text-blue-400 transition-colors">Projekte</a>
+                <a href="index.html#about" class="hover:text-blue-400 transition-colors">Über mich</a>
+                <a href="index.html#contact" class="hover:text-blue-400 transition-colors">Kontakt</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 text-center space-y-4">
+            <a href="index.html#projects" class="block text-xl font-medium hover:text-blue-400 transition-colors">Projekte</a>
+            <a href="index.html#about" class="block text-xl font-medium hover:text-blue-400 transition-colors">Über mich</a>
+            <a href="index.html#contact" class="block text-xl font-medium hover:text-blue-400 transition-colors">Kontakt</a>
+        </div>
+    </header>
+
+    <!-- Writeup-Inhalt -->
+    <main class="container mx-auto px-4 md:px-12 py-16">
+        <a href="index.html" class="text-blue-400 hover:underline mb-8 inline-block">&larr; Zurück zum Portfolio</a>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Analyse von Phishing-Angriffen</h1>
+        <p class="text-gray-400 text-lg mb-8">Veröffentlicht am 23. September 2024</p>
+        
+        <div class="prose prose-invert max-w-none text-gray-300 space-y-6">
+            <p>Phishing-Angriffe bleiben eine der größten Bedrohungen für die Cybersicherheit. In diesem Bericht analysieren wir die neuesten Techniken, die von Angreifern verwendet werden, und entwickeln Abwehrmechanismen für Unternehmen und Privatpersonen.</p>
+            
+            <h2 class="text-2xl md:text-3xl font-bold text-white">Techniken der Angreifer</h2>
+            <p>Die Angreifer werden immer raffinierter. Sie nutzen Social Engineering, um das Vertrauen der Opfer zu gewinnen. Dazu gehören gefälschte E-Mails, die scheinbar von vertrauenswürdigen Quellen stammen, oder gefälschte Webseiten, die kaum vom Original zu unterscheiden sind. Ein typisches Beispiel ist der CEO-Fraud, bei dem eine E-Mail vom angeblichen Chef gesendet wird, um eine dringende Geldüberweisung zu veranlassen.</p>
+            
+            <h2 class="text-2xl md:text-3xl font-bold text-white">Präventionsmaßnahmen</h2>
+            <p>Um sich zu schützen, ist es entscheidend, Mitarbeiter und Benutzer zu schulen. Wichtige Maßnahmen umfassen:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li><span class="font-semibold text-white">Erkennen verdächtiger Merkmale:</span> Absenderadressen, Rechtschreibfehler und unerwartete Anhänge sind oft ein Hinweis auf einen Angriff.</li>
+                <li><span class="font-semibold text-white">Zwei-Faktor-Authentifizierung (2FA):</span> Dies bietet eine zusätzliche Sicherheitsebene, selbst wenn das Passwort kompromittiert wurde.</li>
+                <li><span class="font-semibold text-white">Regelmäßige Software-Updates:</span> Systeme sollten stets auf dem neuesten Stand gehalten werden, um bekannte Sicherheitslücken zu schließen.</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-8 text-center text-gray-500 text-sm">
+        <p>Erstellt mit Tailwind CSS & ❤️</p>
+        <p class="mt-2">© 2024 Cybersecurity Portfolio. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- JavaScript für das mobile Menü -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
