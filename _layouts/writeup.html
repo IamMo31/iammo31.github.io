@@ -2,9 +2,11 @@
 layout: default
 ---
 <main class="px-4 py-12">
-  <article class="prose prose-invert lg:prose-xl mx-auto">
+  <article class="max-w-3xl mx-auto prose prose-invert lg:prose-lg">
+    <!-- Titel -->
     <h1 class="text-4xl font-bold mb-8 text-center">{{ page.title }}</h1>
 
+    <!-- Tags -->
     {% if page.tags %}
     <div class="mb-6 text-center">
       {% for tag in page.tags %}
@@ -13,12 +15,15 @@ layout: default
     </div>
     {% endif %}
 
-    <!-- Hier wird der Markdown-Inhalt eingefügt -->
+    <!-- Hauptinhalt -->
     {{ content }}
 
-    <div class="mt-12 flex justify-between text-blue-400 font-semibold">
-      <a href="{{ '/projects/' | relative_url }}">&larr; Back to Projects</a>
-      <a href="{{ '/' | relative_url }}">&uarr; Back to Home</a>
+    <!-- Zurück-Button -->
+    <div class="mt-12 text-center">
+      <a href="{{ '/projects/' | relative_url }}"
+         class="inline-block px-6 py-3 text-lg font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-colors">
+        ← Back to Projects
+      </a>
     </div>
   </article>
 </main>
