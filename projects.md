@@ -11,8 +11,7 @@ permalink: /projects/
         </a>
         <div class="hidden md:flex space-x-8 text-lg">
             <a href="{{ '/' | relative_url }}" class="hover:text-blue-400 transition-colors">Home</a>
-            <a href="#projects-list" class="hover:text-blue-400 transition-colors">All Projects</a>
-            <a href="#about" class="hover:text-blue-400 transition-colors">About Me</a>
+            <a href="{{ '/' | relative_url }}#about" class="hover:text-blue-400 transition-colors">About Me</a>
         </div>
         <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
             <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -32,7 +31,7 @@ permalink: /projects/
             <h2 class="text-2xl font-bold text-white mb-2">{{ project.title }}</h2>
             <p class="text-gray-300 mb-4">{{ project.long }}</p>
             <p class="text-sm text-gray-400 mb-4">Tags: {% for tag in project.tags %}{{ tag }}{% if forloop.last == false %}, {% endif %}{% endfor %}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">Mehr lesen →</a>
+            <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" class="text-blue-400 hover:text-blue-300 font-semibold">Mehr lesen →</a>
         </article>
         {% endfor %}
     </section>

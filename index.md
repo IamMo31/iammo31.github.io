@@ -12,8 +12,7 @@ title: Cybersecurity Portfolio
         </a>
         <div class="hidden md:flex space-x-8 text-lg">
             <a href="{{ '/projects/' | relative_url }}" class="hover:text-blue-400 transition-colors">Projects</a>
-            <a href="#about" class="hover:text-blue-400 transition-colors">About Me</a>
-            <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            <a href="{{ '/' | relative_url }}#about" class="hover:text-blue-400 transition-colors">About Me</a>
         </div>
         <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
             <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -23,8 +22,7 @@ title: Cybersecurity Portfolio
     </nav>
     <div id="mobile-menu" class="hidden md:hidden mt-4 text-center space-y-4">
         <a href="{{ '/projects/' | relative_url }}" class="block text-xl font-medium hover:text-blue-400 transition-colors">Projects</a>
-        <a href="#about" class="block text-xl font-medium hover:text-blue-400 transition-colors">About Me</a>
-        <a href="#contact" class="block text-xl font-medium hover:text-blue-400 transition-colors">Contact</a>
+        <a href="{{ '/' | relative_url }}#about" class="block text-xl font-medium hover:text-blue-400 transition-colors">About Me</a>
     </div>
 </header>
 
@@ -46,7 +44,7 @@ title: Cybersecurity Portfolio
         <div class="bento-card p-6 md:p-8 rounded-2xl border border-gray-700">
             <h3 class="text-2xl font-bold text-white mb-2">{{ project.title }}</h3>
             <p class="text-gray-400 mb-4">{{ project.short }}</p>
-            <a href="{{ '/projects/#' | append: project.slug | relative_url }}" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
+            <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">
                 Read Report
                 <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
