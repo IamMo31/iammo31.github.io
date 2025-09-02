@@ -1,0 +1,9 @@
+title: Cybersecurity Portfolio
+description: "Security analyses and reports"
+# Wenn du eine Benutzerseite nutzt (username.github.io) lass baseurl leer:
+baseurl: "" # setze z.B. "/repo-name" für Projektseiten
+# Ersetze url mit deiner Seiten-URL (oder lasse leer während Entwicklung)
+url: "https://<USERNAME>.github.io"
+markdown: kramdown
+theme: null
+plugins: []
