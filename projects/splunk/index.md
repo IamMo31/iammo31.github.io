@@ -2,7 +2,6 @@
 layout: writeup
 title: Active Directory Project
 permalink: /projects/splunk/
-tags: [IAM]
 ---
 
 # Active Directory Project
