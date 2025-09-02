@@ -25,7 +25,7 @@ permalink: /projects/audit/
     <h1 class="text-4xl font-extrabold text-white mb-4">Security Audit for Web Applications</h1>
     <p class="text-gray-300 mb-6">Praxisleitfaden für Penetrationstests, inklusive Checklisten, Tool-Empfehlungen und Beispiel-Reports.</p>
     <p class="text-sm text-gray-400 mb-6">Tags: pentest, web-security, checklist</p>
-    <a href="{{ '/projects/' | relative_url }}" class="inline-block px-6 py-3 font-semibold rounded-md bg-gray-800 text-white hover:bg-gray-700">Zurück zur Projektliste</a>
+    <a href="{{ '/projects/' | relative_url }}" class="inline-block px-6 py-3 font-semibold rounded-md bg-gray-800 text-white hover:bg-gray-700">Back to Projects</a>
 </main>
 
 <footer class="py-8 text-center text-gray-500 text-sm">
