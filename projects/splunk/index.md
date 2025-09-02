@@ -1,3 +1,10 @@
+---
+layout: default
+title: Active Directory Project
+permalink: /projects/splunk/
+tags: [IAM]
+---
+
 # Active Directory Project
 
 **Active Directory (AD)** is Microsoft’s centralized directory service used in Windows-based networks. It enables administrators to manage users, computers, groups, policies, and other resources from a single, structured platform. With AD, access control, resource organization, and security policies can be applied consistently across the entire network.
