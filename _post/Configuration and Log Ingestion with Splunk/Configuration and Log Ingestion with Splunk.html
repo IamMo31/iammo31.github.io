@@ -1,0 +1,721 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Splunk Project</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(174, 130, 0, 0.223); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 99, 174, 0.172); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="240cdf9a-c8c1-80ba-bd77-f3c436468a5f" class="page sans"><header><h1 class="page-title">Splunk Project</h1><p class="page-description"></p></header><div class="page-body"><p id="240cdf9a-c8c1-802c-8682-d5fce1c34f86" class=""><strong>Security Information and Event Management (SIEM)</strong> systems are a cornerstone of modern cybersecurity operations. They provide a centralized platform for collecting, analyzing, and presenting security-related data from various sources across an organization&#x27;s IT infrastructure.</p><p id="240cdf9a-c8c1-8083-a024-da24a4dfbf9b" class="">At their core, SIEM solutions aggregate log and event data from network devices, servers, applications, and security tools. This massive influx of information is then normalized, correlated, and analyzed in real-time to detect potential security threats, anomalies, and policy violations. By providing a holistic view of an organization&#x27;s security posture, SIEM systems enable security teams to:</p><ul id="240cdf9a-c8c1-8073-8e50-f3e0cda26df3" class="bulleted-list"><li style="list-style-type:disc"><strong>Gain Visibility:</strong> Understand what&#x27;s happening across their entire digital landscape.</li></ul><ul id="240cdf9a-c8c1-8090-ac8e-dba471533a90" class="bulleted-list"><li style="list-style-type:disc"><strong>Detect Threats:</strong> Identify suspicious activities, malware, and intrusion attempts early.</li></ul><ul id="240cdf9a-c8c1-80b4-bb38-d6ec3458937b" class="bulleted-list"><li style="list-style-type:disc"><strong>Respond Effectively:</strong> Facilitate rapid investigation and response to security incidents.</li></ul><ul id="240cdf9a-c8c1-8035-9658-c77edb180f6c" class="bulleted-list"><li style="list-style-type:disc"><strong>Ensure Compliance:</strong> Meet regulatory requirements by logging and reporting on security events.</li></ul><p id="240cdf9a-c8c1-80c0-975c-e45d0a024692" class="">In essence, a SIEM acts as an organization&#x27;s security nerve center, transforming raw data into actionable intelligence to protect against evolving cyber threats.</p><p id="240cdf9a-c8c1-801e-87a0-ecb187a90e71" class="">The objective of this project is to set up a functional <strong>SIEM environment</strong> using <strong>Splunk</strong>. The key goals include: </p><ul id="240cdf9a-c8c1-8063-afcc-d941daba6487" class="bulleted-list"><li style="list-style-type:disc"><strong>Setting up</strong> and <strong>configuring Splunk Enterprise</strong> on a server.</li></ul><ul id="240cdf9a-c8c1-80df-8bff-c32231eb9d40" class="bulleted-list"><li style="list-style-type:disc"><strong>Deployment </strong>of <strong>Splunk’s Universal Forwarder</strong> on both <strong>Windows </strong>and <strong>Linux systems</strong>.</li></ul><ul id="240cdf9a-c8c1-8057-a46a-fae86dbd283a" class="bulleted-list"><li style="list-style-type:disc"><strong>Installation </strong>of <strong>Sysmon </strong>on a <strong>Windows </strong>machine.</li></ul><ul id="240cdf9a-c8c1-8012-8ad9-f3710b4a9b4f" class="bulleted-list"><li style="list-style-type:disc"><strong>Collection of Windows Sysmon </strong>and key <strong>Linux logs</strong>.</li></ul><ul id="240cdf9a-c8c1-80f3-b87a-c3c4d874e2e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Demonstration</strong> of <strong>basic log ingestion</strong> and <strong>searching</strong> in Splunk</li></ul><h3 id="240cdf9a-c8c1-8054-a88f-f2c1f42d8d9a" class="">Splunk Home Lab: Centralized Log Management</h3><hr id="240cdf9a-c8c1-8098-bedd-e3988413b848"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Prerequisites</summary><div class="indented"><p id="240cdf9a-c8c1-8008-bc73-c079df42f812" class="">Before you begin, make sure you have:</p><ul id="240cdf9a-c8c1-80c0-991b-e729fbabb86a" class="bulleted-list"><li style="list-style-type:disc">Basic knowledge of Windows and Linux for navigating, editing files and settings.</li></ul><ul id="240cdf9a-c8c1-80cf-9e3a-ef203c5684c4" class="bulleted-list"><li style="list-style-type:disc">A <strong>Windows</strong> and a <strong>Linux system</strong>.</li></ul><ul id="240cdf9a-c8c1-8028-bd83-d740f3409d49" class="bulleted-list"><li style="list-style-type:disc">A <strong>Linux server</strong> for Splunk</li></ul><ul id="240cdf9a-c8c1-804c-bdbf-eb710f2a8a13" class="bulleted-list"><li style="list-style-type:disc">Basic Knowledge of <strong>Splunk’s Processing Language</strong> (SPL) to leverage <strong>searching</strong>.</li></ul></div></details><hr id="240cdf9a-c8c1-804a-ae8c-ca50b75ec48c"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Experimental Setup</summary><div class="indented"><p id="24ccdf9a-c8c1-803e-b014-e1ac6573a993" class="">The virtualized environment consists of three machines deployed via Oracle VirtualBox: a Windows 10 workstation, a Ubuntu workstation, and a Ubuntu server. The Windows VM is allocated 1 CPU, 2 GB of RAM, and 50 GB of disk space. The Ubuntu workstation is configured with 2 CPUs, 4 GB of RAM, and 75 GB of disk space, while the Ubuntu server is provisioned with 1 CPU, 2 GB of RAM, and 100 GB of disk space. All machines are set up within a NAT-based virtual network, which uses the <code>10.0.2.0/24</code> IPv4 address space.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="240cdf9a-c8c1-80ab-9dc8-fe45080583bd" class="code code-wrap"><code class="language-Mermaid" style="white-space:pre-wrap;word-break:break-all">graph TD
+    subgraph &quot;NAT-Network (10.0.2.0/24)&quot;
+        SPLUNK[Ubuntu Server&lt;br&gt;Splunk Instance&lt;br&gt;IP: 10.0.2.20]
+        WIN[Windows Machine&lt;br&gt;Universal Forwarder + Sysmon&lt;br&gt;IP: 10.0.2.11]
+        LINUX[Ubuntu Machine&lt;br&gt;Universal Forwarder&lt;br&gt;IP: 10.0.2.12]
+    end
+
+    WIN_LOGS[Sysmon Logs]
+    LINUX_LOGS[Linux Logs]
+
+    WIN_LOGS --&gt; WIN
+    LINUX_LOGS --&gt; LINUX
+
+    WIN --&gt;|send logs| SPLUNK
+    LINUX --&gt;|send logs| SPLUNK
+</code></pre></div></details><hr id="240cdf9a-c8c1-80d1-9980-eb0571dfa654"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Implementation Steps</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Step 1: Initial Configuration</summary><div class="indented"><p id="240cdf9a-c8c1-804e-8a00-db80e50a9a76" class=""><strong>Windows Machine</strong></p><ul id="240cdf9a-c8c1-806f-ba03-e624e011e3f4" class="bulleted-list"><li style="list-style-type:disc">Assign a static IP-address (<code>10.0.2.11</code>) under the network settings. Open a command-line terminal and enter <code>ping </code><code><a href="http://google.com">google.com</a></code> to verify the internet connectivity.</li></ul><ul id="240cdf9a-c8c1-80c0-800a-f41924b26d08" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/Installing-Sysmon-on-a-Windows-Machine-23ecdf9ac8c180afa8def01b00fc34b4?pvs=21">Install Sysmon</a>.</li></ul><p id="240cdf9a-c8c1-8037-b900-e1948cc9d54d" class=""><strong>Ubuntu Machine</strong></p><ul id="240cdf9a-c8c1-80cb-824b-d60c835dc783" class="bulleted-list"><li style="list-style-type:disc">Assign a static IP-address (<code>10.0.2.12</code>) under the network settings. Open a  terminal and enter <code>ping </code><code><a href="http://google.com">google.com</a></code> to ensure internet connectivity. <figure id="240cdf9a-c8c1-8070-84fb-cd87de4e550c" class="image"><a href="snap1.jpg"><img style="width:418.984375px" src="snap1.jpg"/></a></figure></li></ul><p id="240cdf9a-c8c1-80a7-ad17-fbcf6c94b784" class=""><strong>Ubuntu Server</strong></p><ul id="240cdf9a-c8c1-8080-b325-dc71b1f7a0d6" class="bulleted-list"><li style="list-style-type:disc"><strong>Set a static IP-address</strong> (<code>10.0.2.20</code>): Use <code>sudo nano /etc/netplan/50-cloud-init.yaml</code> to open the configuration file (in some cases<code> installer-config.yaml</code>) in the nano editor.<p id="240cdf9a-c8c1-8006-91e1-d761453ad5a3" class="">Change <code>dhcp4: true</code> to <code>dhcp4: no</code> and add <code>addresses: [10.0.2.20/24]</code>, <code>nameservers</code> with an additional attribute <code>addresses: [8.8.8.8]</code> as attributes of the network interface. Also add <code>routes</code> with the list<code> - to: default</code> and the attribute <code>via: 10.0.2.1</code> . <div class="indented"><ul id="241cdf9a-c8c1-8027-acd3-d19a07a3174c" class="toggle"><li><details open=""><summary><strong>Explanation</strong>: </summary><p id="241cdf9a-c8c1-8032-a1a8-fae00d45af29" class=""><code><strong>dhcp4: no</strong></code></p><p id="241cdf9a-c8c1-80b4-9f14-fc176488476c" class="">Disables DHCP for IPv4. This means the system will <strong>not automatically obtain</strong> an IP address, gateway, or DNS server from a DHCP server.</p><p id="241cdf9a-c8c1-8081-914f-f4429469d51d" class=""><code><strong>addresses: [10.0.2.20/24]</strong></code></p><p id="241cdf9a-c8c1-80e3-8521-fbd3165e417f" class="">Assigns a <strong>static IP address</strong> to the interface <code>enp0s3</code>. The <code>/24</code> subnet mask corresponds to <code>255.255.255.0</code>, allowing up to <strong>256 IP addresses</strong> in the network.</p><p id="241cdf9a-c8c1-8049-8ef8-c508f693a04d" class=""><code><strong>nameservers:</strong></code></p><p id="241cdf9a-c8c1-8023-a017-f2efdf3c893d" class="">Defines the <strong>DNS servers</strong> used for domain name resolution.</p><p id="241cdf9a-c8c1-8070-8479-f7180e6bf07a" class="">With <code>addresses: [8.8.8.8]</code>, we&#x27;re using <strong>Google&#x27;s public DNS</strong>.</p><p id="241cdf9a-c8c1-80e6-b429-fba6258f6cfb" class=""><code><strong>routes:</strong></code></p><p id="241cdf9a-c8c1-8009-8a28-ed46b34c8e17" class="">Specifies <strong>static routing rules</strong>.</p><ul id="241cdf9a-c8c1-80f7-83d7-d4042d80f752" class="bulleted-list"><li style="list-style-type:disc"><code>to: default</code> sets the <strong>default route</strong>, which is used for traffic that doesn&#x27;t match a more specific route.</li></ul><ul id="241cdf9a-c8c1-8001-bd3b-fa9f076c676d" class="bulleted-list"><li style="list-style-type:disc"><code>via: 10.0.2.1</code> indicates the <strong>default gateway</strong> to which such traffic should be sent.</li></ul></details></li></ul><figure id="240cdf9a-c8c1-806e-8940-f6df4e0303f6" class="image" style="text-align:center"><a href="snap2.jpg"><img style="width:240.96875px" src="snap2.jpg"/></a><figcaption>It should look similar to this.</figcaption></figure></div></p></li></ul><ul id="240cdf9a-c8c1-8039-9309-ea8cfd5f8479" class="bulleted-list"><li style="list-style-type:disc">Save the file (Ctrl+X, then Y, then Enter) and apply the changes using <code>sudo netplan apply</code>.</li></ul><ul id="240cdf9a-c8c1-80cc-8fd9-dbd92d881f83" class="bulleted-list"><li style="list-style-type:disc">Use <code>ip a</code> to verify the servers IP-address and try to <code>ping google.com</code> to ensure internet connectivity.</li></ul><ul id="240cdf9a-c8c1-80a4-9bb2-d2dd99fee758" class="bulleted-list"><li style="list-style-type:disc"><strong>Download from Host Machine</strong>: On your host machine (no VM), go to <a href="https://www.splunk.com/">splunk.com</a> and sign up for an account. Once logged in, navigate to <strong>Products &gt; Free Trials and Downloads &gt; Splunk Enterprise</strong>. Select <strong>Linux</strong> as the operating system and download the <strong>.deb</strong> file. Save this file to a directory that you can easily share with your Ubuntu Server VM<p id="240cdf9a-c8c1-80b4-9629-ee60303c3116" class="">To easily transfer the Splunk installer from your host machine to the Server VM, we&#x27;ll use VirtualBox&#x27;s shared folder feature, which requires Guest Additions.</p></li></ul><ul id="240cdf9a-c8c1-801f-8175-d7602abd08cc" class="bulleted-list"><li style="list-style-type:disc"><strong>VBox Shared Folder Features</strong>: First install VirtualBox Guest Additions by running <code>sudo apt get install virtualbox-guest-additions-iso</code> followed by <code>sudo apt get install virtualbox-guest-utils</code>.<ul id="241cdf9a-c8c1-80de-a63d-d20f27561af7" class="toggle"><li><details open=""><summary><strong>Explanation</strong>:</summary><p id="241cdf9a-c8c1-80a1-93c0-f53891638949" class=""><strong>VirtualBox Guest Additions</strong> are a set of drivers and utilities installed in the guest OS to enhance performance and integration with the host system. They enable features like shared clipboard, improved display support, and <strong>shared folders</strong>, which allow seamless file exchange between the host and guest operating systems.</p><p id="241cdf9a-c8c1-8016-a92a-c73e25adc1ed" class=""><code>sudo apt-get install virtualbox-guest-additions-iso</code><br/>Installs the ISO file that contains the VirtualBox Guest Additions installer.</p><p id="241cdf9a-c8c1-807b-91cb-eba283d74c00" class=""><code>sudo apt-get install virtualbox-guest-utils</code><br/>This installs the utilities and services support Guest Additions functionality.<br/></p></details></li></ul><p id="241cdf9a-c8c1-801c-b107-ddbfe6993ec9" class="">We need to add our user to the vboxsf <strong>group</strong> by running <code>sudo adduser [your_username] vboxsf</code>. We’ll need to reboot (<code>sudo reboot</code>) the server afterwards for this change to take effect.</p><p id="241cdf9a-c8c1-8061-bd82-c4e116fa8a67" class="">In VirtualBox go to <strong>Settings &gt; Shared Folders</strong>. Add a new shared folder. For the <strong>Folder Path</strong>, browse to the directory on your host machine where you saved the Splunk installer. Check <strong>Auto-mount</strong> and <strong>Make Permanent</strong>, and you can select <strong>Read-only.</strong></p><p id="241cdf9a-c8c1-80a5-8213-c9d833e91bec" class="">After rebooting and logging back into Ubuntu, create a directory for mounting (e.g., <code>mkdir share</code>). Then, mount the shared folder using a command like: <code>sudo mount -t vboxsf -o uid=1000,gid=1000 [shared_folder_name] share</code> . You should now see the Splunk installer within your <code>share</code> directory. </p><ul id="241cdf9a-c8c1-80ec-91f0-dbd6b62ad730" class="toggle"><li><details open=""><summary><strong>Explanation</strong>:</summary><p id="241cdf9a-c8c1-806d-9313-fbb08fcc45ff" class="">the <code>mount</code> command makes a filesystem accessible at a certain point in the directory tree, <code>-t vboxsf</code> specifies the <strong>type</strong> of the filesystem as VirtualBox shared folder, <code>-o uid=1000,gid=1000</code> sets the <strong>owner</strong> and <strong>group ownership </strong>of the mounted files to <strong>user </strong>and <strong>group ID </strong>to 1000 (usually the regular user) and the last argument <code>share</code> specifies the mounting point in the guest os.</p></details></li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Step 2: Splunk Enterprise Installation &amp; Configuration</summary><div class="indented"><p id="240cdf9a-c8c1-809f-bd25-d430b5be4a74" class=""><strong>Ubuntu Server</strong></p><ul id="241cdf9a-c8c1-803b-ab9f-d3bf627a099a" class="bulleted-list"><li style="list-style-type:disc"><strong>Installation of Splunk Enterprise:</strong> Navigate to the shared directory and run <code>sudo dpkg -i [splunk_installer_filename.deb] </code>to install Splunk. <ul id="241cdf9a-c8c1-80d8-b276-c4d1f89e3752" class="toggle"><li><details open=""><summary><strong>Explanation</strong>:</summary><p id="241cdf9a-c8c1-805b-8674-f9150f1924fa" class=""><code>dpkg -i [splunk_installer_filename.deb]</code> : Invokes the debian package manager and <code>-i</code> indicates it should install the <code>[splunk_installer_filename.deb]</code> file.</p></details></li></ul></li></ul><ul id="241cdf9a-c8c1-8061-9041-cec22732ea8d" class="bulleted-list"><li style="list-style-type:disc"><strong>Start Splunk Service</strong>: Once installed, change directory to Splunk&#x27;s binary folder (<code>cd /opt/splunk/bin</code>). Then, start Splunk using <code>sudo -u splunk bash</code> followed by <code>./splunk start</code>. You will be prompted to <strong>accept the license terms</strong> and <strong>create an administrative username and password</strong> for Splunk. <ul id="24ccdf9a-c8c1-80e6-9f37-d4c8d7f753d5" class="toggle"><li><details open=""><summary><strong>Explanation</strong>:</summary><ul id="24ccdf9a-c8c1-8081-bb60-e68f937d4742" class="bulleted-list"><li style="list-style-type:disc"><code>sudo -u splunk bash</code>: Runs the <code>bash</code> shell as the <code>splunk</code> user. <ul id="24ccdf9a-c8c1-806e-945f-d16497ced6c8" class="toggle"><li><details open=""><summary><strong>Important Note</strong>:</summary><p id="24ccdf9a-c8c1-8051-a5b9-e77acb5583b4" class="">The <code>splunk</code> user is a <strong>least privilege account</strong> created during Splunk&#x27;s installation. This account has all the necessary permissions to run the Splunk service.</p></details></li></ul></li></ul><ul id="24ccdf9a-c8c1-80f3-b8b6-cacd385d48f8" class="bulleted-list"><li style="list-style-type:disc"><code>./splunk start</code>: Starts the Splunk service.</li></ul></details></li></ul></li></ul><ul id="241cdf9a-c8c1-80e3-be60-ec969f30552e" class="bulleted-list"><li style="list-style-type:disc"><strong>Enable Splunk at Boot</strong>: To ensure Splunk starts automatically whenever your VM reboots, run <code>exit</code> followed by <code>sudo /opt/splunk/bin/splunk enable boot-start -user splunk</code>.<br/>Restart the server. After the reboot we can check the status with <code>sudo systemctl status splunk.service</code>.<ul id="241cdf9a-c8c1-8032-b7b4-ff835aeabeae" class="toggle"><li><details open=""><summary><strong>Explanation:</strong></summary><ul id="24ccdf9a-c8c1-808e-8110-e403c89d8d6e" class="bulleted-list"><li style="list-style-type:disc"><code>exit</code>: Exits the current shell.</li></ul><ul id="24ccdf9a-c8c1-80ac-99d7-d02cd46a6b19" class="bulleted-list"><li style="list-style-type:disc"><code>sudo /opt/splunkforwarder/bin/splunk enable boot-start -user splunk</code>: <br/>Enables the Splunk forwarder to start automatically at boot time, running under the <code>splunk</code> user account.</li></ul></details></li></ul></li></ul><p id="241cdf9a-c8c1-8039-bf91-c789e2829e3a" class=""><strong>Workstation</strong></p><ul id="241cdf9a-c8c1-8039-a703-ee9a79f9b8ff" class="bulleted-list"><li style="list-style-type:disc"><strong>Configure Splunk for Receiving Data: </strong>Open a web browser on one of your workstations and navigate to <code>http://10.0.2.20:8000</code> (Splunk&#x27;s default web port). Log in with the administrative credentials you just created.<p id="241cdf9a-c8c1-80e4-924a-d7be8f31f534" class=""><strong>Create an Index</strong>: Go to <strong>Settings &gt; Indexes</strong> and click <strong>New Index</strong>. Give it a name (e.g. endpoint) and save it. This is where logs from your machines will be stored. </p><figure id="241cdf9a-c8c1-80a9-b3b4-cdb6959f82d8" class="image"><a href="snap3.jpg"><img style="width:577.984375px" src="snap3.jpg"/></a><figcaption>Create a new index.</figcaption></figure><p id="241cdf9a-c8c1-8003-a36c-cde658a13deb" class=""><strong>Configure Receiving Port</strong>: Go to <strong>Settings &gt; Forwarding and Receiving &gt; Configure Receiving</strong>. Click <strong>New Receiving Port</strong> and enter <strong>9997</strong> (Splunk&#x27;s default port for receiving forwarded events), then save. </p><figure id="241cdf9a-c8c1-80cc-8c39-f6f93908dd80" class="image"><a href="snap5.jpg"><img style="width:577.984375px" src="snap5.jpg"/></a><figcaption>Configure a new receiving port.</figcaption></figure></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Step 3: Universal Forwarder Installation &amp; Configuration</summary><div class="indented"><p id="240cdf9a-c8c1-8031-8a8b-ffef2d3e980b" class=""><strong>Windows Machine</strong></p><ul id="240cdf9a-c8c1-8073-8c59-f85218aba8c6" class="bulleted-list"><li style="list-style-type:disc"><strong>Installation of Splunks’s Universal Forwarder</strong>: On your Windows machine, download the <strong>Universal Forwarder</strong> from <a href="https://www.splunk.com/en_us/download.html">https://www.splunk.com/en_us/download.html</a>. Additionally download the SHA512 file to verify the integrity of your download.  <ul id="241cdf9a-c8c1-809b-90a5-c43f548bc366" class="toggle"><li><details open=""><summary>Verification:</summary><p id="241cdf9a-c8c1-80c1-944c-d9e6531296ec" class="">Copy the hash from the SHA512 and open a PowerShell terminal. Use <code>(Get-FileHash [universal_forwarder_name.msi] -Algorithm SHA512).Hash -eq [copied_hash]</code> to verify the integrity. </p><figure id="241cdf9a-c8c1-80d6-86a2-f0135290f80d" class="image"><a href="snap6.jpg"><img style="width:539.9375px" src="snap6.jpg"/></a></figure></details></li></ul><p id="241cdf9a-c8c1-806b-a1b8-f2a13b50208e" class="">Afterwards start the installation process. <strong>Accept the license agreement</strong> by checking the relevant box. Select the <strong>&quot;on premise Splunk Enterprise instance&quot;</strong> option and proceed.<br/><br/>Set a username (e.g., &quot;admin&quot;) for the forwarder. You can choose to generate a random password or set your own. </p><p id="241cdf9a-c8c1-801a-88e4-f9eb5da2f000" class=""><strong>Skip the deployment server configuration</strong> as it&#x27;s not applicable in this setup.</p><p id="241cdf9a-c8c1-8012-81b9-f78741a2d23f" class="">For the <strong>receiving indexer</strong>, input the <strong>IP address of your Splunk server (e.g., </strong><code><strong>10.0.2.20</strong></code><strong>)</strong> and use the <strong>default port of 9997</strong> for receiving events. Proceed and click “Install”.</p></li></ul><ul id="241cdf9a-c8c1-8059-a46c-dbedef527054" class="bulleted-list"><li style="list-style-type:disc"><strong>Configuring the Splunk Forwarder Service: </strong>Go to <strong>Services</strong> and search for the <strong>Splunk Forwarder Service. </strong>Right click on it, <strong>Properties &gt; Login</strong> and select <strong>“Local System account”. <br/></strong>Restart the service.  <ul id="241cdf9a-c8c1-8044-84e5-c9fa872ce760" class="toggle"><li><details open=""><summary><strong>Important Note</strong>:</summary><p id="241cdf9a-c8c1-8039-8969-f6ec4d4d2359" class="">If the Forwarder Service is configured to use <strong>&quot;NT Service\SplunkForwarder&quot;</strong>, it may encounter permission issues when trying to collect logs.</p></details></li></ul><figure id="241cdf9a-c8c1-803e-943d-d8f7273d29dc" class="image"><a href="snap8.jpg"><img style="width:615.96875px" src="snap8.jpg"/></a></figure></li></ul><ul id="241cdf9a-c8c1-800b-9e16-f74e8b794f47" class="bulleted-list"><li style="list-style-type:disc"><strong>Log Collection</strong>: We want to configure <code>inputs.conf</code> located in <code>C:\Program Files\SplunkUniversalForwarder\etc\system\default\</code>. The content of <code>inputs.conf</code> instructs the Splunk forwarder to push events related to <strong>application, security, </strong>and<strong> system logs, </strong>as well as<strong> Sysmon data</strong>.<ul id="241cdf9a-c8c1-8064-9032-f32e9db668ca" class="toggle"><li><details open=""><summary>Important Note:</summary><p id="241cdf9a-c8c1-8039-bf3c-e99354cd1bd3" class=""><strong>Do not edit </strong>the <code>inputs.conf</code> file in the <code>default</code> directory<strong> directly.</strong> Instead, you <strong>must create a new inputs.conf file within the local directory</strong> (e.g., <code>C:\Program Files\SplunkUniversalForwarder\etc\system\local\</code>). This practice ensures that you have a default configuration to revert to if needed.<br/><br/></p></details></li></ul><p id="241cdf9a-c8c1-801b-9f74-c0f48cba05cc" class="">Therefore open the editor with administrator privileges and enter following configuration:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="241cdf9a-c8c1-80a1-9fcd-c507a4b9e87b" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">[WinEventLog://Application]
+index = endpoint
+disabled = false
+
+[WinEventLog://Security]
+index = endpoint
+disabled = false
+
+[WinEventLog://System]
+index = endpoint
+disabled = false
+
+[WinEventLog://Microsoft-Windows-Sysmon/Operational]
+index = endpoint
+disabled = false
+renderXml = true
+source = XmlWinEventLog:Microsoft-Windows-Sysmon/Operational</code></pre><ul id="241cdf9a-c8c1-8063-a391-ee33ad244e3a" class="toggle"><li><details open=""><summary><strong>Explanation</strong>:</summary><p id="241cdf9a-c8c1-800e-83b5-d8d88aa4a159" class="">The <strong>input stanza</strong> <code>[WinEventLog://&lt;LogName&gt;]</code> enables the collection of the specified <code>&lt;LogName&gt;</code> from the <strong>WindowsEventLog API. </strong>All logs get routed to the <code>endpoint</code> <strong>index</strong>. The <code>disabled</code> flag indicates whether or not the input is <code>enabled</code>. The <code>renderXml = true</code> flag preserves the <strong>XML format</strong> and the <code>source</code> flag sets the event source type to distinguish it from other logs.</p></details></li></ul><p id="241cdf9a-c8c1-8064-86fb-f277985ba713" class="">You need to restart the Splunk Forwarder Service in order for the changes to take effect.</p></li></ul><p id="240cdf9a-c8c1-8081-92f5-f213bdd0732a" class=""><strong>Ubuntu Machine</strong></p><ul id="240cdf9a-c8c1-80c3-a83f-de21a9cebcad" class="bulleted-list"><li style="list-style-type:disc"><strong>Installation of Splunks’s Universal Forwarder</strong>: On your Ubuntu machine, download the <strong>Universal Forwarder</strong> from <a href="https://www.splunk.com/en_us/download.html">https://www.splunk.com/en_us/download.html</a>. Additionally download the SHA512 file to verify the integrity of your download.  <ul id="241cdf9a-c8c1-80a5-988a-dc902672d291" class="toggle"><li><details open=""><summary><strong>Verification</strong>:</summary><p id="241cdf9a-c8c1-80a0-bacc-d967d16c664e" class="">Use <code>sha512sum  —check [file_name].deb.sha512</code> to check the hash sum. </p><figure id="241cdf9a-c8c1-8052-98b7-fa3613416c6e" class="image"><a href="snap10.jpg"><img style="width:539.96875px" src="snap10.jpg"/></a></figure></details></li></ul><p id="24ccdf9a-c8c1-80ff-9fae-fe051f547d3e" class="">Navigate to the download directory (<code>~/Downloads</code>) and run <code>sudo dpkg -i [splunkforwarder_filename].deb</code> to start the installation.</p></li></ul><ul id="24ccdf9a-c8c1-8051-ba8b-e9caca75880a" class="bulleted-list"><li style="list-style-type:disc"><strong>Start Forwarder Service</strong>: Once installed, change directory to the binary folder (<code>cd /opt/splunkforwarder/bin</code>). Then, start the service using <code>sudo -u splunkfwd bash</code> followed by <code>./splunk start</code>. You will be prompted to <strong>accept the license terms</strong> and <strong>create an administrative username and password</strong>. <ul id="24ccdf9a-c8c1-801f-b682-d16f61e02f7a" class="toggle"><li><details open=""><summary><strong>Explanation</strong>:</summary><ul id="24ccdf9a-c8c1-8083-a053-e117e5f628a5" class="bulleted-list"><li style="list-style-type:disc"><code>sudo -u splunkfwd bash</code> : Runs the <code>bash</code> shell as the <code>splunkfwd</code> user. <ul id="24ccdf9a-c8c1-8057-888d-e9eb10307b4e" class="toggle"><li><details open=""><summary><strong>Important Note</strong>:</summary><p id="24ccdf9a-c8c1-8051-9560-dbd432ee57dc" class="">The <code>splunkfwd</code> user is a <strong>least privilege account</strong> created during the forwarder’s installation. This account has all the necessary permissions to run the service.</p></details></li></ul></li></ul><ul id="24ccdf9a-c8c1-8021-8baa-df94e0881fdc" class="bulleted-list"><li style="list-style-type:disc"><code>./splunk start</code>: Starts the forwarder service.</li></ul></details></li></ul></li></ul><ul id="24ccdf9a-c8c1-80a1-bc6d-d9771e180b93" class="bulleted-list"><li style="list-style-type:disc"><strong>Enable Splunk Forwarder at Boot</strong>: To ensure the forwarder starts automatically whenever your VM reboots, stop the service (<code>./splunk stop</code>). After the instance stopped, run <code>exit</code> followed by <code>sudo /opt/splunkforwarder/bin/splunk enable boot-start -user splunkfwd</code> . <br/>Restart the workstation. After rebooting, we can check the status with <code>sudo systemctl status SplunkForwarder.service</code>. <ul id="24ccdf9a-c8c1-8033-83a2-d97f2475454d" class="toggle"><li><details open=""><summary><strong>Explanation</strong>:</summary><ul id="24ccdf9a-c8c1-809f-9bef-d8e54374a799" class="bulleted-list"><li style="list-style-type:disc"><code>./splunk stop</code>: Stops the forwarder service.</li></ul><ul id="24ccdf9a-c8c1-80e7-9822-de7fed8777ba" class="bulleted-list"><li style="list-style-type:disc"><code>exit</code>: Exits the current shell.</li></ul><ul id="24ccdf9a-c8c1-80bb-a267-fc965b1344dd" class="bulleted-list"><li style="list-style-type:disc"><code>sudo /opt/splunkforwarder/bin/splunk enable boot-start -user splunkfwd</code>: <br/>Enables the Splunk forwarder to start automatically at boot time, running under the <code>splunkfwd</code> user account.<br/><br/></li></ul></details></li></ul></li></ul><ul id="24ccdf9a-c8c1-8015-8e22-f988bf949308" class="bulleted-list"><li style="list-style-type:disc"><strong>Configuring the Universal Forwarder</strong>: We want to configure the forwarder using the config files specifically <code>inputs.-</code> and <code>outputs.conf</code>. To do so navigate to <code>/opt/splunkforwarder/etc/system/local</code>.<br/>We want to configuring the data forwarding first. Therefore run <code>sudo nano outputs.conf</code> to open/create the configuration file with the nano text editor and insert following configuration: <figure id="24ccdf9a-c8c1-8091-96ea-f771f7b8a613" class="image"><a href="snap11.jpg"><img style="width:653.984375px" src="snap11.jpg"/></a><figcaption>Basic configuration to forward data to the Splunk instance on the Ubuntu server.</figcaption></figure><ul id="24ccdf9a-c8c1-8098-9432-f15631ba4d70" class="toggle"><li><details open=""><summary><strong>Explanation</strong>:</summary><ul id="24ccdf9a-c8c1-8078-9dea-d9e14f98686a" class="bulleted-list"><li style="list-style-type:disc"><code>[tcpout]</code>: Splunk stanza to configure data forwarding using tcp.</li></ul><ul id="24ccdf9a-c8c1-80b4-8163-d3c411dbb0a3" class="bulleted-list"><li style="list-style-type:disc"><code>defaultGroup = splunk_receiver</code>: <br/>This line instructs the forwarder to send all collected data to the group named <code>splunk_receiver</code>. This is the default destination for all forwarded data.</li></ul><ul id="24ccdf9a-c8c1-8054-87a2-e783187524ad" class="bulleted-list"><li style="list-style-type:disc"><code>[tcpout:splunk_receiver]</code>: <br/>This stanza defines the group that was named in the <code>defaultGroup</code> setting. It specifies the actual destinations for the data.</li></ul><ul id="24ccdf9a-c8c1-8083-b46c-d8e86c68574c" class="bulleted-list"><li style="list-style-type:disc"><code>server = 10.0.2.20</code>: This line specifies the destination of your indexer.</li></ul></details></li></ul></li></ul><ul id="24ccdf9a-c8c1-802f-a3dc-e1d7c05ff62a" class="bulleted-list"><li style="list-style-type:disc"><strong>Log Collection</strong>: Now we want to configure <code>inputs.conf</code>. The content of <code>inputs.conf</code> instructs the Splunk forwarder to push events related to the <strong>system </strong>and <strong> authentication</strong>.<br/>Therefore open/create the configuration file with the nano text editor using <code>sudo nano inputs.conf</code> and insert following configuration: <figure id="24ccdf9a-c8c1-8061-af92-e0523f44b440" class="image"><a href="snap12.jpg"><img style="width:654px" src="snap12.jpg"/></a><figcaption>Basic configuration to forward system and authentication logs.</figcaption></figure><ul id="24ccdf9a-c8c1-8052-8947-d7bc7370bfb8" class="toggle"><li><details open=""><summary>Explanation:</summary><ul id="24ccdf9a-c8c1-80be-bc91-ce4525a8512e" class="bulleted-list"><li style="list-style-type:disc"><code><strong>[monitor://&lt;path&gt;]</strong></code>: This stanza tells Splunk to actively monitor a specific file path. When a new line is added to the file, Splunk reads it and sends the data.</li></ul><ul id="24ccdf9a-c8c1-80a0-b567-f2afa5c0f0a2" class="bulleted-list"><li style="list-style-type:disc"><code>index = &lt;name&gt;</code>: All logs get routed to the specified index name.</li></ul><ul id="24ccdf9a-c8c1-8008-8dd1-f6ba1e251722" class="bulleted-list"><li style="list-style-type:disc"><code><strong>sourcetype = &lt;name&gt;</strong></code>: This setting assigns a type to the incoming data, which helps Splunk automatically parse the events correctly.  Predefined or custom source types can be used.</li></ul><ul id="24ccdf9a-c8c1-807b-96f1-c29ffb308c4e" class="bulleted-list"><li style="list-style-type:disc"><code>disabled = true/false</code>: Indicates whether or not the file path should be monitored.</li></ul></details></li></ul></li></ul></div></details></div></details><hr id="240cdf9a-c8c1-8030-bd7d-ca62fa2cd73a"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Verification &amp; Testing</summary><div class="indented"><ul id="240cdf9a-c8c1-8058-869f-c2b2eda65c3d" class="bulleted-list"><li style="list-style-type:disc"><strong>Log Ingestion</strong>: <figure id="24ccdf9a-c8c1-80c9-9152-d85b1de0fe54" class="image"><a href="snap13.jpg"><img style="width:681.984375px" src="snap13.jpg"/></a><figcaption>View of Splunk’s Search &amp; Reporting app. </figcaption></figure></li></ul><ul id="240cdf9a-c8c1-804e-a908-c5a6e8ee0400" class="bulleted-list"><li style="list-style-type:disc"><strong>Windows Logs</strong>: <figure id="24ccdf9a-c8c1-8071-8771-cfddb8e03ba9" class="image"><a href="snap15.jpg"><img style="width:681.984375px" src="snap15.jpg"/></a><figcaption>Using SPL to filter for Windows logs only. We can see, we successfully ingested Application, Security, System and Sysmon logs.</figcaption></figure></li></ul><ul id="240cdf9a-c8c1-80e4-9ab4-d798a71552a4" class="bulleted-list"><li style="list-style-type:disc"><strong>Linux Logs</strong>: <figure id="24ccdf9a-c8c1-80c8-a635-e4c25ba49409" class="image"><a href="snap14.jpg"><img style="width:653.984375px" src="snap14.jpg"/></a><figcaption>Using SPL to filter for Linux logs only: We can see we successfully ingested authentication and syslog logs.</figcaption></figure></li></ul></div></details><hr id="240cdf9a-c8c1-807c-bc22-e275f19f68b3"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Conclusion &amp; Future Work</summary><div class="indented"><ul id="240cdf9a-c8c1-8022-bea5-f3d6022d4ba6" class="bulleted-list"><li style="list-style-type:disc"><strong>Summary of Project</strong>: My project involved deploying a Splunk Universal Forwarder on two distinct workstations: one running Windows 10 and the other running Ubuntu. On the Windows host, I enabled and configured Sysmon and set the forwarder to collect Application, Security, System, and Sysmon event logs. On the Ubuntu host, the forwarder was configured to collect authentication and syslog data. Finally, I deployed a Splunk Enterprise server on a dedicated Ubuntu machine, which was configured to receive and index the aforementioned logs from both workstations.</li></ul><ul id="240cdf9a-c8c1-8057-a281-eda7333b7ed9" class="bulleted-list"><li style="list-style-type:disc"><strong>Key Learnings</strong>: Installation and configuration of Splunk’s Universal Forwarders on Windows and Linux machines, installation and configuration of Splunk Enterprise on a Ubuntu server, basic log ingestion</li></ul><ul id="240cdf9a-c8c1-8080-a31c-faac368f41ac" class="bulleted-list"><li style="list-style-type:disc"><strong>Potential Next Steps</strong>: Creating custom dashboards and alerts, adding more data sources (e.g. network devices, web servers), integrating threat intelligence feeds, exploring Splunk apps and add-ons</li></ul></div></details><hr id="240cdf9a-c8c1-802d-b15e-c1f635e975c6"/><p id="240cdf9a-c8c1-801e-880a-cca8b7918323" class=""><strong>RELATED PAGES</strong></p><figure id="23ecdf9a-c8c1-80af-a8de-f01b00fc34b4" class="link-to-page"><a href="https://www.notion.so/Installing-Sysmon-on-a-Windows-Machine-23ecdf9ac8c180afa8def01b00fc34b4?pvs=21">Installing Sysmon on a Windows Machine</a></figure><figure id="23ecdf9a-c8c1-80a6-8dd1-fe5b604bab9c" class="link-to-page"><a href="https://www.notion.so/Splunk-SPL-Cheat-Sheet-23ecdf9ac8c180a68dd1fe5b604bab9c?pvs=21">Splunk SPL Cheat Sheet</a></figure><p id="241cdf9a-c8c1-8096-9bbb-c909e03a4ff9" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
