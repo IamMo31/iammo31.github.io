@@ -37,7 +37,7 @@ permalink: /projects/
     </section>
 
     <div class="mt-12 text-center">
-        <a href="{{ '/' | relative_url }}" class="inline-block px-6 py-3 font-semibold rounded-md bg-gray-800 text-white hover:bg-gray-700">Zurück zur Startseite</a>
+        <a href="{{ '/' | relative_url }}" class="inline-block px-6 py-3 font-semibold rounded-md bg-gray-800 text-white hover:bg-gray-700">Back to Home</a>
     </div>
 </main>
 
