@@ -1,0 +1,37 @@
+layout: default title: Willkommen permalink: /
+<header class="hero-gradient p-12 md:p-20 text-center rounded-xl my-8 md:my-12">
+<div class="max-w-4xl mx-auto">
+<h1 class="text-4xl md:text-6xl font-black mb-4">
+Willkommen in meinem Cyber-Portfolio
+</h1>
+<p class="text-lg md:text-2xl font-light mb-8 opacity-80">
+Hier teile ich meine analytischen Einblicke und technischen Write-ups zu Schwachstellen und CTF-Challenges.
+</p>
+<a href="{{ site.baseurl }}/writeups" class="inline-block bg-accent text-gray-900 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-accent-glow">
+Meine Write-ups entdecken
+</a>
+</div>
+</header>
+
+<section class="my-16">
+<h2 class="text-3xl font-extrabold text-center mb-8">Neueste Write-ups</h2>
+<div class="writeup-grid">
+{% for post in site.posts limit:4 %}
+<a href="{{ post.url | relative_url }}" class="writeup-item">
+<h3 class="text-xl font-bold mb-2">{{ post.title }}</h3>
+<p class="text-gray-400">{{ post.description }}</p>
+<span class="inline-block mt-4 text-accent text-sm">Weiterlesen &rarr;</span>
+</a>
+{% endfor %}
+</div>
+</section>
+
+<section class="my-16 text-center">
+<h2 class="text-3xl font-extrabold mb-4">Über dieses Portfolio</h2>
+<p class="text-lg opacity-80 max-w-2xl mx-auto mb-8">
+Dieses Portfolio ist ein Ort, um meine Leidenschaft für Cybersicherheit zu dokumentieren. Jedes Write-up reflektiert meinen Ansatz zur Problemlösung und mein technisches Verständnis.
+</p>
+<a href="{{ site.baseurl }}/about" class="inline-block text-accent font-bold py-3 px-6 rounded-full border-2 border-accent transition-all duration-300 transform hover:bg-accent hover:text-gray-900">
+Mehr über mich
+</a>
+</section>
