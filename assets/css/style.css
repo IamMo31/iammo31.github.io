@@ -81,6 +81,7 @@ section {
     color: var(--secondary-text-color);
     text-decoration: none;
     margin-left: var(--spacing-unit);
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 .site-nav a:hover {
@@ -91,7 +92,7 @@ section {
 /* 4. Hero Section (Homepage) */
 .hero {
     text-align: center;
-    padding: calc(var(--spacing-unit) * 2) 0;
+    padding: calc(var(--spacing-unit) * 2) 0 0 0;
 }
 
 .hero-title {
@@ -116,7 +117,7 @@ section {
     background-color: var(--surface-color);
     border-radius: var(--border-radius);
     padding: calc(var(--spacing-unit) * 2);
-    margin: var(--spacing-unit) 0;
+    margin-top: calc(var(--spacing-unit) * 2);
 }
 
 .about-me h2 {
@@ -134,7 +135,7 @@ section {
 }
 
 /* 6. Post List & Cards */
-.post-list h2 {
+.post-list h1, .post-list h2 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: var(--spacing-unit);
@@ -142,6 +143,11 @@ section {
     padding-bottom: 0.5rem;
     display: inline-block;
 }
+.page-description {
+    color: var(--secondary-text-color);
+    margin-bottom: var(--spacing-unit);
+}
+
 
 .grid {
     display: grid;
