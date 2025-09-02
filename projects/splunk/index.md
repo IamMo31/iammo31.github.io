@@ -4,8 +4,6 @@ title: Active Directory Project
 permalink: /projects/splunk/
 ---
 
-# Active Directory Project
-
 **Active Directory (AD)** is Microsoft’s centralized directory service used in Windows-based networks. It enables administrators to manage users, computers, groups, policies, and other resources from a single, structured platform. With AD, access control, resource organization, and security policies can be applied consistently across the entire network.
 
 Active Directory serves as the backbone of many enterprise IT environments, supporting key features like **Single Sign-On (SSO)**, **Group Policy management**, and **domain-based administration**. Its scalable and secure architecture makes it ideal for both small business networks and large, distributed organizations.
@@ -61,7 +59,7 @@ graph TD
 - Give the server a significant name (e.g. `DC01`).
 - Assign the server a static IP-address (`10.0.2.10`), subnetmask (`255.255.255.0`), gateway (`10.0.2.1`) and select the google DNS server (`8.8.8.8`) as preferred DNS server.
 
-![Network settings on the Windows server.](snap1.jpg)
+![Network settings on the Windows server.](attachment:e3afdd29-fbf5-4d83-a1f4-7e475998ecdd:snap1.jpg)
 
 Network settings on the Windows server.
 
@@ -70,7 +68,7 @@ Network settings on the Windows server.
 - Give the Windows host a significant name (e.g. `WorkstationWin01`).
 - Assign the workstation a static IP-address (`10.0.2.11`), subnetmask (`255.255.255.0`), gateway (`10.0.2.1`) and select the IP of the domain controller as preferred and the google DNS server (`8.8.8.8`) as alternate DNS server.
 
-![Network settings on the Windows host.](snap7.jpg)
+![Network settings on the Windows host.](attachment:a98e2b9f-a8b7-453c-a196-081abb273bb0:snap7.jpg)
 
 Network settings on the Windows host.
 
@@ -79,25 +77,25 @@ Network settings on the Windows host.
 1. On the Windows server, open the “Server Manager”, then go to “Manage”, “Add Roles and Features” and click “Next”.
 2. Ensure that “Role-based and feature-based installation” is selected and click “Next”.
     
-    ![snap2.jpg](snap2.jpg)
+    ![snap2.jpg](attachment:2752991f-119e-4371-856e-10cb8f0a5cec:snap2.jpg)
     
 3. Select the server (`DC01`) and click “Next”.
 4. Select “Active Directory Domain Services” and “Add Features”. Go “Next” untill you can click “Install”. 
     
-    ![snap3.jpg](snap3.jpg)
+    ![snap3.jpg](attachment:e2defe7f-aab5-4f83-9add-248226222b9c:snap3.jpg)
     
 5. After the installation succeeded you will notice a notification in the top right corner on the flag icon. Click it and click on “Promote this server to a domain controller”.
     
-    ![snap4.jpg](snap4.jpg)
+    ![snap4.jpg](attachment:e8c2e963-73ee-4395-9738-6093cf5b9bb1:snap4.jpg)
     
 6. Select “Add a new forest” because we are creating a new domain and select a domain name (e.g. `doecorp.local`). Choose a top-level domain name that is not accessible through the internet (e.g. `.local`, `.host`). Click “Next”. 
     
-    ![snap5.jpg](snap5.jpg)
+    ![snap5.jpg](attachment:5c74591c-364f-4c73-941f-029d8fb74849:snap5.jpg)
     
 7. Choose a secure password and click “Next”.
 8. For our purposes, we let everything on default and go “Next” until we can click “Install” and start the installation process. After the installation succeeded, the system reboots automatically. 
     
-    ![Notice the domain name next to the account name.](snap6.jpg)
+    ![Notice the domain name next to the account name.](attachment:cff79c70-f8fe-4e92-b701-335bc497800d:snap6.jpg)
     
     Notice the domain name next to the account name.
     
@@ -109,7 +107,7 @@ Network settings on the Windows host.
 1. Go to “Advanced system settings” .
 2. Under the “Computer Name” tab, click on “Change…”. 
     
-    ![snap10.jpg](snap10.jpg)
+    ![snap10.jpg](attachment:02082130-33c7-45bf-9d9a-c5f01c4a7bcd:snap10.jpg)
     
 3. Insert the domain name of your newly created domain (`doecorp.local`). 
 4. Enter the credentials of your domain controller. The system will restart. 
@@ -121,12 +119,12 @@ Network settings on the Windows host.
 3. Extend the domain (`doecorp.local`) on the left.
 4. Right click on the domain, select “New” and “Organizational Unit” (OU) and choose a name (e.g. `IT`). You will see your newly created OU in the side bar on the left. 
     
-    ![snap8.jpg](snap8.jpg)
+    ![snap8.jpg](attachment:450044fd-869f-4dcd-a8d9-d733fb30ecd0:snap8.jpg)
     
 5. Right click on ur OU and create a new user in your OU by repeating step 4 but choosing “User” instead of “Organizational Unit”.
 6. Insert the user’s credentials. 
     
-    ![snap9.jpg](snap9.jpg)
+    ![snap9.jpg](attachment:be7cb165-372d-4dc8-95f5-d8240fc2fd4f:snap9.jpg)
     
 7. For our purpose we want to uncheck the option “User must change password at next logon”. 
 
@@ -136,7 +134,7 @@ Network settings on the Windows host.
 
 After setting up the Active Directory , we can restart the workstation and click on “Other User” in the bottom left corner of the login screen.
 
-![snap11.jpg](snap11.jpg)
+![snap11.jpg](attachment:400922ad-4079-4418-841f-9f222bdab807:snap11.jpg)
 
 We will be able to login with the credentials of the newly created user `Bob`.
 
@@ -149,5 +147,3 @@ We will be able to login with the credentials of the newly created user `Bob`.
 - **Potential Next Steps:** Configuring Group Policies (GPOs), setting up a DHCP server, or adding a Read-Only Domain Controller.
 
 ---
-
-**RELATED PAGES**
