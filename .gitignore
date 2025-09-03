@@ -1,6 +1,12 @@
-# node / build
-node_modules/
-.DS_Store
-.bundle/
+# Local Site Directories
+_site/
 .sass-cache/
-public/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby Gems
+.bundle
+Gemfile.lock
+
+# Log Files
+*.log
