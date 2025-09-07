@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="container mx-auto px-6 py-20">
+    
+    <article class="prose prose-lg lg:prose-xl max-w-4xl mx-auto">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+    </article>
+</section>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+</script>

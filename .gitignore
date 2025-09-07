@@ -1,12 +1,16 @@
-# Local Site Directories
+# .gitignore
+
+# Jekyll-spezifische Ordner
 _site/
-.sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
-# Ruby Gems
-.bundle
-Gemfile.lock
+# Bundler-spezifische Dateien
+.bundle/
 
-# Log Files
-*.log
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# Sass/SCSS Cache
+.sass-cache/
