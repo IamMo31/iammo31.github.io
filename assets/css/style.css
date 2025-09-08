@@ -8,9 +8,19 @@ body {
     --accent-color: #0891b2;
     --accent-color-darker: #0e7490;
     --accent-color-pale: #ecfeff;
-    --accent-color-bg: #FFFFFF;
+    --accent-color-bg: #F9FAFB; /* bg-grey-50 */
     --accent-color-headline: #1E293B;
     --accent-color-txt: #475569;
+	--bg-post-pale: #FFFFFF;
+	--color-text: #1f2937;
+    --color-text-light: #6b7280;
+    --color-heading: #0f172a;
+    --color-heading-light: #374151;
+    --color-inline-code-bg: #e5e7eb;
+    --color-inline-code-text: #1f2937;
+    --color-code-block-bg: #f3f4f6;
+    --color-code-block-text: #1f2937;
+    --color-link: #3b82f6; /* Blau für Links */
 }
 
 /* Override colors for dark mode */
@@ -18,136 +28,97 @@ body {
     --accent-color-pale: #1e293b;
     --accent-color-bg: #0F172A;
     --accent-color-headline: #FFFFFF;
-    --accent-color-txt: #94A3B8
+    --accent-color-txt: #94A3B8;
+	--bg-post-pale: #1e293b; /* bg-slate-800 */
+	--color-text: #e5e7eb;
+    --color-text-light: #9ca3af;
+    --color-heading: #f4f6f9;
+    --color-heading-light: #e5e7eb;
+    --color-inline-code-bg: #374151;
+    --color-inline-code-text: #e5e7eb;
+    --color-code-block-bg: #1f2937;
+    --color-code-block-text: #f4f6f9;
+    --color-link: #60a5fa; /* Helleres Blau für Links */
 }
 
 .nav-link.active {
             font-weight: 700;
         }
 		
-
-/* Haupttextfarbe für Absätze, Listen etc. im Light-Mode */
-.prose p,
-.prose ul,
-.prose ol,
-.prose li {
-    color: #475569; /* Ein dunkles Schiefergrau, passe es nach Wunsch an */
-}
-
-/* Farbe für Überschriften im Light-Mode */
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4 {
-    color: #1e293b; /* Ein noch dunkleres Grau, fast schwarz */
-}
-
-/* Farbe für Links im Light-Mode */
-.prose a {
-    color: #0891b2; /* Dein gewohnter Cyan-Farbton */
-}
-
-/* Farbe für fettgedruckten Text im Light-Mode */
-.prose strong {
-    color: #1e293b; /* Dieselbe Farbe wie Überschriften für starken Kontrast */
-}
-
-/* Dark Mode styles for Prose */
-.dark .prose p,
-.dark .prose ul,
-.dark .prose ol,
-.dark .prose li {
-    color: var(--accent-color-txt); /* Use the --accent-color-txt variable for main text */
-}
-
-.dark .prose h1,
-.dark .prose h2,
-.dark .prose h3,
-.dark .prose h4 {
-    color: var(--accent-color-headline); /* Use the --accent-color-headline for headings */
-}
-
-.dark .prose a {
-    color: var(--accent-color); /* Use your existing accent color for links */
-}
-
-.dark .prose strong {
-    color: var(--accent-color-headline); /* Same as headings for strong contrast */
-}
-
-/* Stil für den Code-Hintergrund und Text */
-.prose pre {
-    background-color: #f1f5f9; /* Helles Grau, ähnlich Notions Codeblöcken */
-    color: #1e293b;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    overflow-x: auto; /* Stellt sicher, dass lange Zeilen scrollbar sind */
-}
-
-/* Stil für Inline-Code */
-.prose code {
-	color: #BE524B; /* Schriftfarbe */
-    background-color: #FAECEC;
-    padding: 0.125rem 0.25rem;
-    border-radius: 0.25rem;
-    font-size: 0.875rem; /* Etwas kleiner als normaler Text */
-}
-
-.dark .prose code {
-	color: #BE524B; /* Schriftfarbe */
-    background-color: #332523;
-    
-}
-
-/* Spezifische Farben für die Syntaxhervorhebung */
-/* Diese müssen Sie anpassen, wenn Sie ein anderes Farbschema wünschen */
-.prose .highlight .c1 { /* Beispiel für einen Kommentar in CSS */
-    color: #94a3b8;
-}
-
-.prose {
-    font-family: 'Inter', sans-serif; /* Notion nutzt eine ähnliche, serifenlose Schriftart */
-    line-height: 1.75; /* Ein großzügiger Zeilenabstand */
-    color: #333; /* Ein weicheres Schwarz für den Text */
-    max-width: 65ch; /* Limitiert die Zeilenlänge für bessere Lesbarkeit */
-}
-
-/* Anpassungen für Überschriften */
-.prose h1, .prose h2, .prose h3 {
+/* --- Typografie Styles --- */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+    color: var(--color-heading);
     font-weight: 700;
-    line-height: 1.25;
+    margin-bottom: 1rem;
 }
 
-/* Anpassungen für Links, Code, etc. */
-.prose a {
-    text-decoration: none; /* Keine Unterstreichung, wie bei Notion */
-    color: #2563eb; /* Ein weiches Blau für Links */
+.prose h1 {
+    font-size: 2.25rem; /* 4xl */
+}
+
+.prose h2 {
+    font-size: 1.875rem; /* 3xl */
+}
+
+.prose h3 {
+    font-size: 1.5rem; /* 2xl */
+}
+
+.prose p {
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
 }
 
 .prose ul {
-    list-style-type: disc; /* Setzt die Aufzählungszeichen auf Punkte */
-    padding-left: 1.5em; /* Fügt einen Einzug für die Aufzählungszeichen hinzu */
+    list-style-type: disc; /* Ungeordnete Liste */
+    list-style-position: outside;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
 }
 
-/* Stil für geordnete Listen (Ordered Lists) */
 .prose ol {
-    list-style-type: decimal; /* Setzt die Aufzählungszeichen auf Zahlen */
-    padding-left: 1.5em; /* Fügt einen Einzug hinzu */
+    list-style-type: decimal; /* Geordnete Liste */
+    list-style-position: outside;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
 }
 
-/* Stil für die einzelnen Listenelemente */
-.prose li {
-    margin-bottom: 0.5em; /* Fügt einen Abstand zwischen den Listenelementen hinzu */
+/* --- Code Styles --- */
+.prose code {
+    background-color: var(--color-inline-code-bg);
+    color: var(--color-inline-code-text);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
 }
 
-/* Dark Mode Anpassungen für Aufzählungen */
-.dark .prose ul {
-    list-style-type: disc;
-    /* Optional: Passen Sie hier die Farbe der Aufzählungszeichen an, falls nötig. */
+.prose pre {
+    background-color: var(--color-code-block-bg);
+    color: var(--color-code-block-text);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: monospace;
+    margin-bottom: 1.5rem;
 }
 
-.dark .prose ol {
-    list-style-type: decimal;
-    /* Optional: Passen Sie hier die Farbe der Aufzählungszeichen an, falls nötig. */
+.prose hr {
+    border: none;
+    border-top: 1px solid var(--accent-color-headline);
+    margin: 0 0 1.5rem 0; 
 }
+
+/* --- Link Styles --- */
+.prose a {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.prose a:hover {
+    text-decoration: none;
+}
+
 /* ... weitere Stile ... */
