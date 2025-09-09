@@ -14,3 +14,9 @@ Thumbs.db
 
 # Sass/SCSS Cache
 .sass-cache/
+
+# local scripts
+/scripts
+
+# backup files
+*.bak

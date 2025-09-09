@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hero-Image Quelle umschalten (nur wenn das Bild auf der Seite existiert)
         if (heroImage) {
             heroImage.src = isDark 
-                ? "https://placehold.co/600x400/1e293b/ffffff?text=Cybersecurity+Dark"
-                : "https://placehold.co/600x400/1e293b/ffffff?text=Cybersecurity";
+                ? "/assets/img/hero_dark.png"
+                : "/assets/img/hero_light.png";
         }
     };
 

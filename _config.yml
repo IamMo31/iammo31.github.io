@@ -2,6 +2,8 @@
 title: Geronimo Trumpfheller - Cybersecurity Portfolio
 description: "Passionate about defending digital landscapes. I specialize in threat intelligence, malware analysis, and building secure systems."
 author: Geronimo Trumpfheller
+baseurl: ""
+repository: "iammo31/iammo31.github.io"
 
 # Markdown-Prozessor für erweiterte Funktionen wie Tabellen etc.
 markdown: kramdown
@@ -13,3 +15,6 @@ kramdown:
 # Plugins, die von GitHub Pages unterstützt werden
 plugins:
   - jekyll-feed
+  
+exclude:
+  - "*.bak"
