@@ -13,7 +13,7 @@ title: Home
             </p>
         </div>
         <div>
-            <img id="hero-image" src="https://placehold.co/600x400/1e293b/ffffff?text=Cybersecurity" alt="Abstract image representing cybersecurity" class="rounded-lg shadow-2xl mx-auto">
+            <img id="hero-image" src="/assets/img/hero_dark.png" alt="Abstract image representing cybersecurity" class="rounded-lg shadow-2xl mx-auto">
         </div>
     </div>
 </section>
