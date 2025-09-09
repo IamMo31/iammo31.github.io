@@ -14,7 +14,7 @@ permalink: /projects/
             </p>
         </div>
         <div>
-            <img id="project-image" src="/assets/img/project_light" alt="Abstract image representing project plans" class="rounded-lg shadow-xl mx-auto">
+            <img id="project-image" src="/assets/img/project_dark.png" alt="Abstract image representing project plans" class="rounded-lg shadow-xl mx-auto">
         </div>
     </div>
 
