@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeIconDark = document.getElementById('theme-icon-dark');
     const heroImage = document.getElementById('hero-image');
     const backToTopBtn = document.getElementById('back-to-top');
+	const projectImage = document.getElementById('project-image');
 
     // Funktion, die Icons UND Bild basierend auf dem Theme-Status aktualisiert
     const updateThemeAssets = (isDark) => {
@@ -23,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
             heroImage.src = isDark 
                 ? "/assets/img/hero_dark.png"
                 : "/assets/img/hero_light.png";
+        }
+		
+		// Projekt-Image Quelle umschalten (nur wenn das Bild auf der Seite existiert)
+        if (projectImage) {
+            projectImage.src = isDark 
+                ? "/assets/img/project_dark.png"
+                : "/assets/img/project_light.png";
         }
     };
 

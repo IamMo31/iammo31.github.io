@@ -14,7 +14,7 @@ permalink: /projects/
             </p>
         </div>
         <div>
-            <img src="https://placehold.co/600x400/1e293b/ffffff?text=My+Blueprints" alt="Abstract image representing project plans" class="rounded-lg shadow-xl mx-auto">
+            <img id="project-image" src="/assets/img/project_light" alt="Abstract image representing project plans" class="rounded-lg shadow-xl mx-auto">
         </div>
     </div>
 
