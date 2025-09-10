@@ -9,11 +9,11 @@ permalink: /projects/
         <div>
             <h1 class="text-4xl md:text-5xl font-black leading-tight mb-4" style="color: var(--accent-color-headline);">Project Write-ups</h1>
             <p class="text-lg" style="color: var(--accent-color-txt);">
-                A collection of my work, from in-depth malware analysis to security framework implementations.
+                A collection of my work, from in-depth analyses to homelab implementations and online CTF challenges.
             </p>
         </div>
         <div>
-            <img id="project-image" src="/assets/img/project_dark.png" alt="Abstract image representing project plans" class="rounded-lg shadow-xl mx-auto">
+            <img id="project-image" src="/assets/img/project_dark.png" alt="An AI-generated image."  title="This image is AI-generated." class="rounded-lg shadow-xl mx-auto">
         </div>
     </div>
 

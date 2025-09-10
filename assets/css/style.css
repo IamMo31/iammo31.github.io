@@ -14,8 +14,6 @@ body {
 	--bg-post-pale: #FFFFFF;
 	--color-text: #1f2937;
     --color-text-light: #6b7280;
-    --color-heading: #0f172a;
-    --color-heading-light: #374151;
     --color-inline-code-bg: #e5e7eb;
     --color-inline-code-text: #1f2937;
     --color-code-block-bg: #f3f4f6;
@@ -32,8 +30,6 @@ body {
 	--bg-post-pale: #1e293b; /* bg-slate-800 */
 	--color-text: #e5e7eb;
     --color-text-light: #9ca3af;
-    --color-heading: #f4f6f9;
-    --color-heading-light: #e5e7eb;
     --color-inline-code-bg: #374151;
     --color-inline-code-text: #e5e7eb;
     --color-code-block-bg: #1f2937;
@@ -47,7 +43,7 @@ body {
 		
 /* --- Typografie Styles --- */
 .prose h1, .prose h2, .prose h3, .prose h4 {
-    color: var(--color-heading);
+    color: var(--accent-color-headline);
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -145,4 +141,12 @@ body {
     font-size: 0.875rem; /* sm */
     margin-top: 0.75rem;
     line-height: 1.4;
+}
+
+p {
+  margin-bottom: 1em; /* Fügt einen Abstand von 1 Zeilenhöhe unter jedem Absatz hinzu */
+}
+
+.leading-relaxed {
+  margin-bottom: 1em;
 }
