@@ -1,19 +1,16 @@
-# .gitignore
 
-# Jekyll-spezifische Ordner
+
+# Jekyll-specific directories
 _site/
 .jekyll-cache/
 .jekyll-metadata
 
-# Bundler-spezifische Dateien
+# Bundler-specific files
 .bundle/
 
-# Systemdateien
+# system files
 .DS_Store
 Thumbs.db
-
-# Sass/SCSS Cache
-.sass-cache/
 
 # local scripts
 /scripts

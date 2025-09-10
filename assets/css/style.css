@@ -20,7 +20,7 @@ body {
     --color-inline-code-text: #1f2937;
     --color-code-block-bg: #f3f4f6;
     --color-code-block-text: #1f2937;
-    --color-link: #3b82f6; /* Blau für Links */
+    --color-link: #3b82f6; /* blue for links */
 }
 
 /* Override colors for dark mode */
@@ -70,7 +70,7 @@ body {
 }
 
 .prose ul {
-    list-style-type: disc; /* Ungeordnete Liste */
+    list-style-type: disc; /* unordered list */
     list-style-position: outside;
     color: var(--color-text);
     margin-bottom: 1.5rem;
@@ -78,7 +78,7 @@ body {
 }
 
 .prose ol {
-    list-style-type: decimal; /* Geordnete Liste */
+    list-style-type: decimal; /* ordered list */
     list-style-position: outside;
     color: var(--color-text);
     margin-bottom: 1.5rem;
@@ -122,30 +122,27 @@ body {
 }
 
 .prose figure {
-    /* Container-Box für Abbildungen */
     /* background-color: var(--color-code-block-bg); */
     border: 1px solid var(--color-border);
     border-radius: 0.5rem;
     padding: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    text-align: left; /* Zentriert den Inhalt wie Bilder */
+    text-align: left; 
 }
 
 .prose figure img {
-    /* Styles für Bilder innerhalb von figure */
+    /* Styles für pictures in figure */
     max-width: 100%;
     height: auto;
     border-radius: 0.25rem;
 }
 
 .prose figure figcaption {
-    /* Styles für die Bildunterschrift */
+    /* styles for figcaption */
     color: var(--color-text-light);
     font-style: italic;
     font-size: 0.875rem; /* sm */
     margin-top: 0.75rem;
     line-height: 1.4;
 }
-
-/* ... weitere Stile ... */

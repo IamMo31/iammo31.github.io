@@ -1,5 +1,4 @@
 ---
-# projects.md
 layout: default
 title: Projects
 permalink: /projects/

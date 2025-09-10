@@ -1,6 +1,5 @@
-// assets/js/main.js
 document.addEventListener('DOMContentLoaded', () => {
-    // Elemente abrufen
+    // get elements
     const themeToggle = document.getElementById('theme-toggle');
     const themeIconLight = document.getElementById('theme-icon-light');
     const themeIconDark = document.getElementById('theme-icon-dark');
@@ -8,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTopBtn = document.getElementById('back-to-top');
 	const projectImage = document.getElementById('project-image');
 
-    // Funktion, die Icons UND Bild basierend auf dem Theme-Status aktualisiert
+    // function to switch items and piucures based on active theme
     const updateThemeAssets = (isDark) => {
-        // Icons umschalten
+        // toogle icons
         if (isDark) {
             themeIconLight.classList.add('hidden');
             themeIconDark.classList.remove('hidden');
@@ -19,14 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
             themeIconDark.classList.add('hidden');
         }
 
-        // Hero-Image Quelle umschalten (nur wenn das Bild auf der Seite existiert)
+        // Hero-Image switch
         if (heroImage) {
             heroImage.src = isDark 
                 ? "/assets/img/hero_dark.png"
                 : "/assets/img/hero_light.png";
         }
 		
-		// Projekt-Image Quelle umschalten (nur wenn das Bild auf der Seite existiert)
+		// Projekt-Image switch
         if (projectImage) {
             projectImage.src = isDark 
                 ? "/assets/img/project_dark.png"
@@ -34,29 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- Initiales Setup beim Laden der Seite ---
-    // Die "Wahrheit" über den Theme-Status kommt jetzt direkt vom <html>-Tag,
-    // da unser Skript im <head> diesen bereits korrekt gesetzt hat.
+    
     const initialThemeIsDark = document.documentElement.classList.contains('dark');
     
-    // Initiales Bild und Icons beim Laden korrekt setzen, um das Bild-Flackern zu beheben.
+    // load initial pictures and icons to reduce flickering.
     updateThemeAssets(initialThemeIsDark);
 
     // --- Event Listeners ---
 
-    // Event Listener für den Toggle-Button
+    // Event Listener for the toggle-button
     themeToggle.addEventListener('click', () => {
-        // Die .dark-Klasse am <html>-Tag umschalten
+    
         const isCurrentlyDark = document.documentElement.classList.toggle('dark');
         
-        // Den neuen Zustand im localStorage speichern
+        // save new state in localStorage
         localStorage.setItem('theme', isCurrentlyDark ? 'dark' : 'light');
         
-        // Icons und Bild entsprechend dem neuen Zustand aktualisieren
+        // update icons and pictures
         updateThemeAssets(isCurrentlyDark);
     });
     
-    // Event Listener für "Back to top"
+    // Event Listener for "Back to top"
     if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
